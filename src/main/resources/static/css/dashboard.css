@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f1f5f9;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #0f172a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    color: white;
+    z-index: 1000; /* 🔥 IMPORTANT */
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #38bdf8;
+}
+
+.sidebar a {
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.sidebar a:hover {
+    background: #1e293b;
+    color: white;
+}
+
+/* TOPBAR */
+.topbar {
+    margin-left: 240px;
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* MAIN AREA FIX 🔥 */
+.main {
+    margin-left: 240px;
+    padding: 25px;
+    position: relative;
+}
+
+/* WELCOME */
+.welcome {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+/* GRID FIX 🔥 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* CARD FIX 🔥 */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.card i {
+    font-size: 30px;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    color: #64748b;
+    font-size: 14px;
+}

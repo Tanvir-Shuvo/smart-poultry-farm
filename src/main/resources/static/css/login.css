@@ -6,7 +6,31 @@ body{
             135deg,
             #0f172a,
             #1e3a8a
-    );
+    );body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+    /* CENTER WRAPPER */
+    .login-wrapper {
+        height: 90vh;
+    }
+
+    /* LOGIN CARD */
+    .login-card {
+        width: 380px;
+        background: white;
+        padding: 30px;
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    /* INPUT FOCUS */
+    .form-control:focus {
+        box-shadow: none;
+        border-color: #16a34a;
+    }
 
     min-height:100vh;
 }
