@@ -1,0 +1,132 @@
+/* PAGE */
+
+body{
+
+    background: linear-gradient(
+            135deg,
+            #0f172a,
+            #1e3a8a
+    );
+
+    min-height:100vh;
+}
+
+/* CONTAINER */
+
+.login-container{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+}
+
+/* CARD */
+
+.login-card{
+
+    width:100%;
+    max-width:420px;
+
+    background:white;
+
+    padding:40px;
+
+    border:none;
+
+    border-radius:20px;
+}
+
+/* TITLE */
+
+.main-title{
+
+    font-size:36px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+    margin-bottom:10px;
+}
+
+/* SUBTITLE */
+
+.sub-title{
+
+    color:#64748b;
+
+    font-size:15px;
+}
+
+/* LABEL */
+
+.form-label{
+
+    font-weight:600;
+
+    color:#334155;
+}
+
+/* INPUT */
+
+.custom-input{
+
+    height:52px;
+
+    border-radius:10px;
+
+    border:1px solid #cbd5e1;
+
+    padding-left:15px;
+}
+
+/* INPUT FOCUS */
+
+.custom-input:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 0.15rem rgba(37,99,235,0.15);
+}
+
+/* BUTTON */
+
+.login-btn{
+
+    height:52px;
+
+    border-radius:10px;
+
+    font-size:17px;
+
+    font-weight:600;
+}
+
+/* REGISTER TEXT */
+
+.register-text{
+
+    color:#64748b;
+
+    margin-bottom:0;
+}
+
+/* REGISTER LINK */
+
+.register-text a{
+
+    text-decoration:none;
+
+    font-weight:700;
+}
+
+.register-text a:hover{
+
+    text-decoration:underline;
+}
