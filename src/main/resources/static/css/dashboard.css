@@ -1,105 +1,103 @@
-body {
-    margin: 0;
+body{
+    background: #f5f7fb;
     font-family: "Segoe UI", sans-serif;
-    background: #f1f5f9;
-}
-
-/* SIDEBAR */
-.sidebar {
-    width: 240px;
-    height: 100vh;
-    background: #0f172a;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    color: white;
-    z-index: 1000; /* 🔥 IMPORTANT */
-}
-
-.sidebar h2 {
-    margin-bottom: 30px;
-    font-size: 18px;
-    color: #38bdf8;
-}
-
-.sidebar a {
-    display: flex;
-    gap: 10px;
-    padding: 12px;
-    margin-bottom: 10px;
-    color: #cbd5e1;
-    text-decoration: none;
-    border-radius: 8px;
-}
-
-.sidebar a:hover {
-    background: #1e293b;
-    color: white;
-}
-
-/* TOPBAR */
-.topbar {
-    margin-left: 240px;
-    height: 60px;
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-/* MAIN AREA FIX 🔥 */
-.main {
-    margin-left: 240px;
-    padding: 25px;
-    position: relative;
 }
 
 /* WELCOME */
-.welcome {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+.welcome-card{
+    background: linear-gradient(135deg, #198754, #157347);
     color: white;
     padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* GRID FIX 🔥 */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-/* CARD FIX 🔥 */
-.card {
+/* MINI CARDS */
+.mini-card{
     background: white;
-    padding: 30px;
+    padding: 18px;
     border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* SUMMARY */
+.summary-card{
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
     transition: 0.3s;
-    position: relative;
-    z-index: 1;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+.summary-card:hover{
+    transform: translateY(-5px);
 }
 
-.card i {
-    font-size: 30px;
-    color: #2563eb;
+.summary-card i{
+    font-size: 28px;
     margin-bottom: 12px;
+    color: #198754;
 }
 
-.card h3 {
-    margin: 10px 0 5px;
+/* OVERVIEW */
+.overview-box p{
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
-.card p {
-    color: #64748b;
+/* INSIGHTS */
+.insight{
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.warning{
+    background: #fff3cd;
+}
+
+.success{
+    background: #d1e7dd;
+}
+
+.primary{
+    background: #cfe2ff;
+}
+
+/* MOTIVATION */
+.motivation-card{
+    background: #212529;
+    color: white;
+    padding: 18px;
+    border-radius: 14px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* BOTTOM NAV */
+.bottom-nav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+}
+
+.bottom-nav a{
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 14px;
+}
+
+.bottom-nav i{
+    margin-bottom: 5px;
+    font-size: 18px;
 }

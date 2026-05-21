@@ -1,65 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard - PoultryCare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Murgi Dashboard</title>
 
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 
-<body class="bg-light">
+<body>
 
-<!-- TOP NAV -->
-<nav class="navbar navbar-dark bg-dark px-4">
-    <a class="navbar-brand fw-bold">🐔 PoultryCare</a>
+<!-- TOP NAVBAR -->
+<nav class="navbar navbar-dark bg-success shadow-sm px-3">
 
-    <a href="/logout" class="btn btn-danger btn-sm">
-        <i class="fa fa-right-from-bracket"></i> Logout
-    </a>
-</nav>
-
-<!-- WELCOME -->
-<div class="container mt-4">
-
-    <div class="alert alert-success">
-        Welcome to Smart Poultry Farm Dashboard
+    <div>
+        <h4 class="text-white m-0">🐔 Smart Murgi</h4>
     </div>
 
-    <!-- CARDS -->
-    <div class="row g-4">
+    <div>
+        <a href="/logout" class="btn btn-light btn-sm">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </a>
+    </div>
+
+</nav>
+
+<div class="container py-4">
+
+    <!-- WELCOME SECTION -->
+    <div class="welcome-card mb-4">
+
+        <h3 th:text="'Welcome, ' + ${user.name}">
+            Welcome User
+        </h3>
+
+        <p class="mb-0">
+            আজকের farm হিসাব ready তো? 🎯
+        </p>
+
+    </div>
+
+    <!-- GAMIFICATION MINI -->
+    <div class="row g-3 mb-4">
+
+        <div class="col-md-4">
+            <div class="mini-card text-center">
+                <h6>🔥 Streak</h6>
+                <h4>3 Days</h4>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="mini-card text-center">
+                <h6>⭐ XP</h6>
+                <h4>45</h4>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="mini-card text-center">
+                <h6>🏅 Level</h6>
+                <h4>Beginner</h4>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SUMMARY CARDS -->
+    <div class="row g-4 mb-4">
 
         <div class="col-md-3">
-            <div class="card shadow-sm p-3 text-center">
-                <i class="fa fa-drumstick-bite fa-2x text-primary"></i>
-                <h5 class="mt-2">Chicken</h5>
+            <div class="summary-card">
+
+                <i class="fa-solid fa-money-bill-wave"></i>
+
+                <h6>Today's Expense</h6>
+
+                <h4>৳ 2,500</h4>
+
             </div>
         </div>
 
         <div class="col-md-3">
-            <div class="card shadow-sm p-3 text-center">
-                <i class="fa fa-wheat-awn fa-2x text-success"></i>
-                <h5 class="mt-2">Feed</h5>
+            <div class="summary-card">
+
+                <i class="fa-solid fa-drumstick-bite"></i>
+
+                <h6>Total Chicken</h6>
+
+                <h4>850</h4>
+
             </div>
         </div>
 
         <div class="col-md-3">
-            <div class="card shadow-sm p-3 text-center">
-                <i class="fa fa-chart-line fa-2x text-warning"></i>
-                <h5 class="mt-2">Sales</h5>
+            <div class="summary-card">
+
+                <i class="fa-solid fa-heart-crack"></i>
+
+                <h6>Mortality</h6>
+
+                <h4>3</h4>
+
             </div>
         </div>
 
         <div class="col-md-3">
-            <div class="card shadow-sm p-3 text-center">
-                <i class="fa fa-file fa-2x text-danger"></i>
-                <h5 class="mt-2">Reports</h5>
+            <div class="summary-card">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h6>Estimated Profit</h6>
+
+                <h4>৳ 1,200</h4>
+
             </div>
         </div>
+
+    </div>
+
+    <!-- QUICK ACTION -->
+    <div class="card border-0 shadow-sm p-4 mb-4">
+
+        <h5 class="mb-3">⚡ Quick Actions</h5>
+
+        <div class="d-flex flex-wrap gap-3">
+
+            <button class="btn btn-success">
+                + Add Expense
+            </button>
+
+            <button class="btn btn-primary">
+                + Add Stock
+            </button>
+
+            <button class="btn btn-danger">
+                + Add Mortality
+            </button>
+
+            <button class="btn btn-dark">
+                View Report
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- WEEKLY OVERVIEW -->
+    <div class="card border-0 shadow-sm p-4 mb-4">
+
+        <h5 class="mb-3">📊 Weekly Overview</h5>
+
+        <div class="overview-box">
+
+            <p>💸 Expense: ৳15,000</p>
+
+            <p>📈 Profit: ৳6,000</p>
+
+            <p>🐔 Mortality: 12</p>
+
+        </div>
+
+    </div>
+
+    <!-- SMART INSIGHTS -->
+    <div class="card border-0 shadow-sm p-4 mb-4">
+
+        <h5 class="mb-3">🧠 Smart Insights</h5>
+
+        <div class="insight warning">
+            ⚠️ Feed cost slightly high
+        </div>
+
+        <div class="insight success">
+            ✅ Mortality stable
+        </div>
+
+        <div class="insight primary">
+            📈 Profit improved this week
+        </div>
+
+    </div>
+
+    <!-- MOTIVATION -->
+    <div class="motivation-card mb-5">
+
+        🔥 3 days continuous activity — Great Job!
 
     </div>
 
 </div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+
+    <div class="container">
+
+        <h5 class="mb-2">🐔 Smart Murgi</h5>
+
+        <p class="mb-2 text-light">
+            Smart Poultry Farm Management System
+        </p>
+
+        <small class="text-secondary">
+            © 2026 Smart Murgi. All rights reserved.
+        </small>
+
+    </div>
+
+</footer>
 
 </body>
 </html>
