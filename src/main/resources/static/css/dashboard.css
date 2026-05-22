@@ -1,56 +1,153 @@
 body{
-    background: #f5f7fb;
+    background: #f4f7fb;
     font-family: "Segoe UI", sans-serif;
 }
 
 /* WELCOME */
 .welcome-card{
-    background: linear-gradient(135deg, #198754, #157347);
+    background: linear-gradient(135deg, #198754, #20c997);
     color: white;
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* MINI CARDS */
+/* MINI CARD */
 .mini-card{
     background: white;
-    padding: 18px;
-    border-radius: 14px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-
-/* SUMMARY */
-.summary-card{
-    background: white;
     padding: 25px;
     border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.mini-card:hover{
+    transform: translateY(-5px);
+}
+
+/* SUMMARY CARD */
+.summary-card{
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
     text-align: center;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
 }
 
 .summary-card:hover{
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 }
 
 .summary-card i{
     font-size: 28px;
-    margin-bottom: 12px;
     color: #198754;
+    margin-bottom: 15px;
 }
 
-/* OVERVIEW */
-.overview-box p{
-    margin-bottom: 10px;
+.summary-card h6{
+    color: #6c757d;
+}
+
+.summary-card h4{
+    font-weight: bold;
+}
+
+/* QUICK ACTION */
+.quick-action-card{
+    border-radius: 22px;
+}
+
+/* BUTTON */
+.action-btn{
+    height: 140px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: white !important;
+    font-weight: 600;
     font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* INSIGHTS */
+/* ICON */
+.action-btn i{
+    font-size: 34px;
+}
+
+/* HOVER */
+.action-btn:hover{
+    transform: translateY(-8px) scale(1.03);
+    color: white;
+}
+
+/* COLORS */
+.expense-btn{
+    background: linear-gradient(135deg, #198754, #20c997);
+}
+
+.stock-btn{
+    background: linear-gradient(135deg, #0d6efd, #3d8bfd);
+}
+
+.mortality-btn{
+    background: linear-gradient(135deg, #dc3545, #ff6b6b);
+}
+
+.report-btn{
+    background: linear-gradient(135deg, #212529, #495057);
+}
+
+/* WEEKLY OVERVIEW */
+.weekly-card{
+    color: white;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    transition: 0.3s ease;
+    animation: fadeUp 0.6s ease;
+}
+
+.weekly-card:hover{
+    transform: translateY(-6px);
+}
+
+.weekly-card i{
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.weekly-card h6{
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.weekly-card h4{
+    font-weight: bold;
+}
+
+/* COLORS */
+.expense-week{
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+}
+
+.profit-week{
+    background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.mortality-week{
+    background: linear-gradient(135deg, #dc3545, #ff6b6b);
+}
+
+/* INSIGHT */
 .insight{
-    padding: 14px;
-    border-radius: 10px;
-    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
     font-weight: 500;
 }
 
@@ -68,36 +165,30 @@ body{
 
 /* MOTIVATION */
 .motivation-card{
-    background: #212529;
+    background: linear-gradient(135deg, #212529, #343a40);
     color: white;
-    padding: 18px;
-    border-radius: 14px;
+    padding: 25px;
+    border-radius: 18px;
     text-align: center;
     font-size: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* BOTTOM NAV */
-.bottom-nav{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: white;
-    display: flex;
-    justify-content: space-around;
-    padding: 12px 0;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+/* FOOTER */
+footer{
+    margin-top: 40px;
 }
 
-.bottom-nav a{
-    text-decoration: none;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 14px;
-}
+/* ANIMATION */
+@keyframes fadeUp{
 
-.bottom-nav i{
-    margin-bottom: 5px;
-    font-size: 18px;
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

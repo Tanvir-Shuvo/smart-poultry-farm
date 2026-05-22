@@ -1,0 +1,46 @@
+body{
+    background: #f4f7fb;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* CARD */
+.expense-card{
+    background: white;
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ICON */
+.expense-icon{
+    width: 80px;
+    height: 80px;
+    background: #198754;
+    color: white;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+/* INPUT */
+.custom-input{
+    height: 50px;
+    border-radius: 12px;
+    border: 1px solid #dcdcdc;
+}
+
+.custom-input:focus{
+    border-color: #198754;
+    box-shadow: 0 0 0 0.15rem rgba(25,135,84,0.2);
+}
+
+/* BUTTON */
+.custom-btn{
+    height: 50px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+}

@@ -17,138 +17,67 @@
     <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 
-<body>
+<body class="bg-light">
 
-<!-- TOP NAVBAR -->
+<!-- TOP BAR -->
 <nav class="navbar navbar-dark bg-success shadow-sm px-3">
 
-    <div>
-        <h4 class="text-white m-0">🐔 Smart Murgi</h4>
-    </div>
+    <h4 class="text-white m-0">🐔 Smart Murgi</h4>
 
-    <div>
-        <a href="/logout" class="btn btn-light btn-sm">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            Logout
-        </a>
-    </div>
+    <a href="/logout" class="btn btn-light btn-sm">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+    </a>
 
 </nav>
 
 <div class="container py-4">
 
-    <!-- WELCOME SECTION -->
-    <div class="welcome-card mb-4">
+    <!-- WELCOME -->
+    <div class="card p-4 shadow-sm mb-4">
+        <h3 th:text="'Welcome, ' + ${user.name}">Welcome</h3>
 
-        <h3 th:text="'Welcome, ' + ${user.name}">
-            Welcome User
-        </h3>
-
-        <p class="mb-0">
-            আজকের farm হিসাব ready তো? 🎯
+        <p class="text-muted mb-0">
+            আজকের farm management ready 🚜
         </p>
-
     </div>
 
-    <!-- GAMIFICATION MINI -->
-    <div class="row g-3 mb-4">
-
-        <div class="col-md-4">
-            <div class="mini-card text-center">
-                <h6>🔥 Streak</h6>
-                <h4>3 Days</h4>
+    <!-- XP CARD -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card p-4 text-center shadow-sm">
+                <h6>⭐ Your XP</h6>
+                <h2 class="text-success" th:text="${xp}">0</h2>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="mini-card text-center">
-                <h6>⭐ XP</h6>
-                <h4>45</h4>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="mini-card text-center">
+        <div class="col-md-6">
+            <div class="card p-4 text-center shadow-sm">
                 <h6>🏅 Level</h6>
-                <h4>Beginner</h4>
+                <h2>Beginner</h2>
             </div>
         </div>
-
-    </div>
-
-    <!-- SUMMARY CARDS -->
-    <div class="row g-4 mb-4">
-
-        <div class="col-md-3">
-            <div class="summary-card">
-
-                <i class="fa-solid fa-money-bill-wave"></i>
-
-                <h6>Today's Expense</h6>
-
-                <h4>৳ 2,500</h4>
-
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="summary-card">
-
-                <i class="fa-solid fa-drumstick-bite"></i>
-
-                <h6>Total Chicken</h6>
-
-                <h4>850</h4>
-
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="summary-card">
-
-                <i class="fa-solid fa-heart-crack"></i>
-
-                <h6>Mortality</h6>
-
-                <h4>3</h4>
-
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="summary-card">
-
-                <i class="fa-solid fa-chart-line"></i>
-
-                <h6>Estimated Profit</h6>
-
-                <h4>৳ 1,200</h4>
-
-            </div>
-        </div>
-
     </div>
 
     <!-- QUICK ACTION -->
-    <div class="card border-0 shadow-sm p-4 mb-4">
+    <div class="card p-4 shadow-sm mb-4">
 
-        <h5 class="mb-3">⚡ Quick Actions</h5>
+        <h5>⚡ Quick Actions</h5>
 
-        <div class="d-flex flex-wrap gap-3">
+        <div class="d-flex gap-3 mt-3 flex-wrap">
 
-            <button class="btn btn-success">
+            <a href="/expense" class="btn btn-success px-4">
                 + Add Expense
-            </button>
+            </a>
 
-            <button class="btn btn-primary">
+            <button class="btn btn-primary px-4">
                 + Add Stock
             </button>
 
-            <button class="btn btn-danger">
+            <button class="btn btn-danger px-4">
                 + Add Mortality
             </button>
 
-            <button class="btn btn-dark">
+            <button class="btn btn-dark px-4">
                 View Report
             </button>
 
@@ -157,66 +86,55 @@
     </div>
 
     <!-- WEEKLY OVERVIEW -->
-    <div class="card border-0 shadow-sm p-4 mb-4">
+    <div class="row mb-4">
 
-        <h5 class="mb-3">📊 Weekly Overview</h5>
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm text-center">
+                <h6>💸 Expense</h6>
+                <h4>৳ 15,000</h4>
+            </div>
+        </div>
 
-        <div class="overview-box">
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm text-center">
+                <h6>📈 Profit</h6>
+                <h4>৳ 6,000</h4>
+            </div>
+        </div>
 
-            <p>💸 Expense: ৳15,000</p>
-
-            <p>📈 Profit: ৳6,000</p>
-
-            <p>🐔 Mortality: 12</p>
-
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm text-center">
+                <h6>🐔 Mortality</h6>
+                <h4>12</h4>
+            </div>
         </div>
 
     </div>
 
-    <!-- SMART INSIGHTS -->
-    <div class="card border-0 shadow-sm p-4 mb-4">
+    <!-- INSIGHTS -->
+    <div class="card p-4 shadow-sm mb-4">
 
-        <h5 class="mb-3">🧠 Smart Insights</h5>
+        <h5>🧠 Smart Insights</h5>
 
-        <div class="insight warning">
-            ⚠️ Feed cost slightly high
-        </div>
-
-        <div class="insight success">
-            ✅ Mortality stable
-        </div>
-
-        <div class="insight primary">
-            📈 Profit improved this week
-        </div>
+        <p class="text-warning mb-1">⚠️ Feed cost slightly high</p>
+        <p class="text-success mb-1">✅ Mortality stable</p>
+        <p class="text-primary mb-0">📈 Profit improving</p>
 
     </div>
 
     <!-- MOTIVATION -->
-    <div class="motivation-card mb-5">
-
-        🔥 3 days continuous activity — Great Job!
-
+    <div class="alert alert-success text-center">
+        🔥 Great job! Keep managing your farm daily
     </div>
 
 </div>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white text-center py-4 mt-5">
+<footer class="bg-dark text-white text-center py-4">
 
-    <div class="container">
+    <h6>🐔 Smart Murgi</h6>
 
-        <h5 class="mb-2">🐔 Smart Murgi</h5>
-
-        <p class="mb-2 text-light">
-            Smart Poultry Farm Management System
-        </p>
-
-        <small class="text-secondary">
-            © 2026 Smart Murgi. All rights reserved.
-        </small>
-
-    </div>
+    <small>Smart Poultry Farm Management System © 2026</small>
 
 </footer>
 
